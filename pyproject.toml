@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "trichinella"
+version = "0.0.1"
+description = "A parasite who will circulate into your body until you give all your contacts to it."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.2"
+SQLAlchemy = "^2.0.25"
+uvicorn = {extras = ["standart"], version = "^0.27.0.post1"}
+psycopg2 = "^2.9.9"
+alembic = "^1.13.1"
+pydantic = {extras = ["email"], version = "^2.6.1"}
+libgravatar = "^1.0.4"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.7"
+fastapi-mail = "^1.4.1"
+python-dotenv = "^1.0.1"
+cloudinary = "^1.38.0"
+fastapi-limiter = "^0.1.6"
+redis = "^5.0.1"
+pydantic-settings = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
