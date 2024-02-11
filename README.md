@@ -10,4 +10,13 @@ Do you remember my desire to write a novel in READMEs just from boring and pain 
 
 So I'm quite busy these days.
 
-\*You can use run this masterpiece of mine just running "main.py", it lacks frontend part so you can see Swagger adding "/docs" to url.
+\*You can run this masterpiece of mine just running "main.py", it lacks frontend part so you can see Swagger adding "/docs" to url.
+
+# DOCUMENTATION ACCESS
+
+To see the documentation, run "docs/\_build/index.html"
+I know, it's better to ignore this while pushing on git, but I decided to save it for checking my work.
+
+# TESTING AN APP
+
+Load repo and run "pytest tests", this will run 22 tests and show their results.

@@ -26,6 +26,19 @@ redis = "^5.0.1"
 pydantic-settings = "^2.1.0"
 
 
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.2.6"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+httpx = "^0.26.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = "ignore::DeprecationWarning"

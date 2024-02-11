@@ -24,6 +24,15 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup():
+    """
+    Initializes resources and performs setup tasks when the application starts up.
+
+    This function is executed automatically when the FastAPI application starts up. It creates
+    a connection to Redis using the provided settings, and initializes FastAPILimiter with the
+    Redis connection.
+
+    :return: None
+    """
     r = await redis.Redis(
         host=settings.redis_host,
         port=settings.redis_port,
@@ -36,6 +45,13 @@ async def startup():
 
 @app.get("/")
 def read_root():
+    """
+    Handler for the root endpoint.
+    This function is a handler for the root endpoint ("/"). It returns a JSON response containing
+    a message.
+
+    :return: A dictionary containing a message.
+    """
     return {
         "message": "Did you know that in the reality everything is different than it actually is"
     }

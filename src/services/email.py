@@ -22,6 +22,17 @@ conf = ConnectionConfig(
 
 
 async def send_email(email: EmailStr, username: str, host: str):
+    """
+    Sends an email to the user with a link to verify their email address.
+
+    :param email: Pass the email address to send the message to
+    :type email: EmailStr
+    :param username: Pass the username to the template
+    :type username: Str
+    :param host: str: Pass the hostname of the server where we want to redirect our user after their email was confirmed.
+    :return: An email
+    :rtype: FastMail
+    """
     try:
         token_verification = auth_service.create_email_token({"sub": email})
         message = MessageSchema(
